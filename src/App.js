@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
+import GlobalStyle from './styles/global';
+import Routes from './routes';
 
-class App extends Component {
-  state = {};
-
-  render() {
-    return (
-      <div className="App">
-        <h1>Hello world</h1>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Fragment>
+    <GlobalStyle />
+    <Routes />
+  </Fragment>
+);
 
 export default App;
