@@ -31,6 +31,12 @@ export const Box = styled.div`
     display: flex;
     flex-direction: column;
 
+    .error {
+      color: #e37a7a;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
     input {
       background: #fff;
       height: 50px;

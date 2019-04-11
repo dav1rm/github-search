@@ -9,7 +9,7 @@ const Routes = () => (
     <Fragment>
       <Switch>
         <Route exact path="/" component={Main} />
-        <Route path="/repositories" component={Repositories} />
+        <Route path="/repositories/:username" component={Repositories} />
       </Switch>
     </Fragment>
   </BrowserRouter>

@@ -24,7 +24,7 @@ Repository.propTypes = {
   repository: PropTypes.shape({
     name: PropTypes.string,
     html_url: PropTypes.string,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     language: PropTypes.string,
     pushed_at: PropTypes.string,
   }).isRequired,

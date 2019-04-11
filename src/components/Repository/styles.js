@@ -47,6 +47,6 @@ export const Ball = styled.span`
   position: relative;
   top: 1px;
   width: 12px;
-  background-color: #f1e05a;
+  background-color: #1d9e9e;
   margin-right: 5px;
 `;
