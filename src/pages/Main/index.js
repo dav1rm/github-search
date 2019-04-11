@@ -3,7 +3,9 @@ import { PropTypes } from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import api from '../../services/api';
 
-import { Container, Box } from './styles';
+import {
+  Container, Form, Box, Title,
+} from './styles';
 
 class Main extends Component {
   static propTypes = {
@@ -49,12 +51,17 @@ class Main extends Component {
     ) : (
       <Container>
         <Box>
-          <h2 className="title">Entre com seu usuário do Github</h2>
-          <form onSubmit={this.handleSubmit}>
-            {!!error && <span className="error">{error}</span>}
-            <input placeholder="username" onChange={this.handleInputChange} value={username} />
+          <Title>Entre com seu usuário do Github</Title>
+          <Form onSubmit={this.handleSubmit}>
+            {!!error && <span>{error}</span>}
+            <input
+              type="text"
+              placeholder="username"
+              onChange={this.handleInputChange}
+              value={username}
+            />
             <button type="submit">Entrar</button>
-          </form>
+          </Form>
         </Box>
       </Container>
     );

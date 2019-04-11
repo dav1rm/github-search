@@ -8,6 +8,54 @@ export const Container = styled.div`
   background: #1d9e9e;
 `;
 
+export const Title = styled.h2`
+  color: #384246;
+  margin-bottom: 30px;
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  span {
+    color: #e37a7a;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  input {
+    background: #fff;
+    height: 50px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #384246;
+    border-radius: 3px;
+    border: 1px solid #d2d5d6;
+
+    &::placeholder {
+      color: #909698;
+      font-size: 18px;
+    }
+  }
+
+  button {
+    background: #1d9e9e;
+    height: 50px;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:hover {
+      background: #1a8c8c;
+    }
+  }
+`;
+
 export const Box = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,52 +69,4 @@ export const Box = styled.div`
 
   border-radius: 5px;
   box-shadow: 0px 0px 10px #888888;
-
-  h2.title {
-    color: #384246;
-    margin-bottom: 30px;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-
-    .error {
-      color: #e37a7a;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    input {
-      background: #fff;
-      height: 50px;
-      padding: 10px 20px;
-      margin-bottom: 10px;
-      font-size: 18px;
-      color: #384246;
-      border-radius: 3px;
-      border: 1px solid #d2d5d6;
-
-      &::placeholder {
-        color: #909698;
-        font-size: 18px;
-      }
-    }
-
-    button {
-      background: #1d9e9e;
-      height: 50px;
-      padding: 5px 10px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #fff;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-
-      &:hover {
-        background: #1a8c8c;
-      }
-    }
-  }
 `;
