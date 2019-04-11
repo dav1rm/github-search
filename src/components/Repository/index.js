@@ -1,6 +1,8 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import Moment from 'react-moment';
 import { Container, Ball } from './styles';
+import 'moment/locale/pt-br';
 
 const Repository = ({ repository }) => (
   <Container>
@@ -12,7 +14,9 @@ const Repository = ({ repository }) => (
       <Ball />
       <span>{repository.language}</span>
     </div>
-    <span className="pushed">Atualizado em: {repository.pushed_at}</span>
+    <span className="pushed">
+      Atualizado <Moment date={repository.pushed_at} fromNow />
+    </span>
   </Container>
 );
 
