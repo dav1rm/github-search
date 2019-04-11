@@ -1,22 +1,24 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import Moment from 'react-moment';
-import { Container, Ball } from './styles';
+import {
+  Container, Name, Description, Language, Updated,
+} from './styles';
 import 'moment/locale/pt-br';
 
 const Repository = ({ repository }) => (
   <Container>
-    <a className="title" href={repository.html_url} target="_blank" rel="noopener noreferrer">
+    <Name href={repository.html_url} target="_blank">
       {repository.name}
-    </a>
-    <p>{repository.description || 'Descrição não cadastrada'}</p>
-    <div className="language">
-      <Ball />
+    </Name>
+    <Description>{repository.description || 'Descrição não cadastrada'}</Description>
+    <Language>
+      <span className="ball" />
       <span>{repository.language}</span>
-    </div>
-    <span className="pushed">
+    </Language>
+    <Updated className="pushed">
       Atualizado <Moment date={repository.pushed_at} fromNow />
-    </span>
+    </Updated>
   </Container>
 );
 
